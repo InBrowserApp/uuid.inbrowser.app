@@ -4,7 +4,7 @@
       <n-text
         code
         style="word-break: break-all; font-size: 2em; cursor: pointer"
-        @click="copyToClipboard"
+        @click="copy"
       >
         {{ uuid }}
       </n-text>
@@ -14,18 +14,14 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from "vue";
 import { NText, NTooltip, NIcon } from "naive-ui";
-import { useMessage } from "naive-ui";
 import Clipboard16Regular from "@vicons/fluent/Clipboard16Regular";
-
-const message = useMessage();
+import { useCopyToClipboard } from "@/composables/useCopyToClipboard";
 
 const props = defineProps<{
   uuid: string;
 }>();
 
-const copyToClipboard = () => {
-  navigator.clipboard.writeText(props.uuid);
-  message.success("Copied to clipboard");
-};
+const { copy } = useCopyToClipboard(toRef(props, "uuid"));
 </script>

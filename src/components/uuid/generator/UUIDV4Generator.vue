@@ -5,7 +5,7 @@
   <div>
     <n-space>
       <RegenerateButton @click="refresh" />
-      <CopyToClipboardButton @click="copyToClipboard" />
+      <CopyToClipboardButton @click="copy" />
     </n-space>
   </div>
 </template>
@@ -14,19 +14,16 @@
 import { ref } from "vue";
 import { v4 as uuidv4 } from "uuid";
 import UUIDDisplay from "@/components/uuid/UUIDDisplay.vue";
-import { NSpace, useMessage } from "naive-ui";
+import { NSpace } from "naive-ui";
 import RegenerateButton from "@/components/controls/RegenerateButton.vue";
 import CopyToClipboardButton from "@/components/controls/CopyToClipboardButton.vue";
+import { useCopyToClipboard } from "@/composables/useCopyToClipboard";
 
-const message = useMessage();
 const uuid = ref(uuidv4());
 
 const refresh = () => {
   uuid.value = uuidv4();
 };
 
-const copyToClipboard = () => {
-  navigator.clipboard.writeText(uuid.value);
-  message.success("Copied to clipboard");
-};
+const { copy } = useCopyToClipboard(uuid);
 </script>
