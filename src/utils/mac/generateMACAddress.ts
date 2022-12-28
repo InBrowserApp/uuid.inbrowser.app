@@ -1,9 +1,7 @@
 export function generateMACAddress(): string {
-  const macAddress = new Array(6)
-    .fill(0)
-    .map(() => Math.floor(Math.random() * 256).toString(16))
-    .join(":")
-    .toUpperCase();
+  const macAddress = "XX:XX:XX:XX:XX:XX".replace(/X/g, function () {
+    return "0123456789ABCDEF".charAt(Math.floor(Math.random() * 16));
+  });
 
   return macAddress;
 }
