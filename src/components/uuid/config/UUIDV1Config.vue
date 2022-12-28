@@ -1,11 +1,14 @@
 <template>
-  <MACAddressInput v-model:address="config.macAddress" />
+  <n-form-item label="MAC Address" :show-feedback="false">
+    <MACAddressInput v-model:address="config.macAddress" />
+  </n-form-item>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
 import MACAddressInput from "@/components/misc/MACAddressInput.vue";
 import type { UUIDV1Config } from "./UUIDV1Config";
+import { NFormItem } from "naive-ui";
 
 const props = defineProps<{
   config: UUIDV1Config;
