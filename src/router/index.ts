@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import UUIDV1View from "../views/UUIDV1View.vue";
 import UUIDV4View from "../views/UUIDV4View.vue";
 import NilUUIDView from "../views/NilUUIDView.vue";
 
@@ -10,6 +11,11 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+    },
+    {
+      path: "/v1",
+      name: "uuidv1",
+      component: UUIDV1View,
     },
     {
       path: "/v4",
