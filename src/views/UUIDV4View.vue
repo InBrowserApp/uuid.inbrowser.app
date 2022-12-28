@@ -2,6 +2,7 @@
   <main>
     <n-h2 prefix="bar" align-text>Version 4 UUID</n-h2>
     <UUIDV4Generator />
+    <n-h2 prefix="bar" align-text>What is a version 4 UUID?</n-h2>
     <UUIDV4Description />
   </main>
 </template>
