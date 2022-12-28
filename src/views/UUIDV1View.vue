@@ -1,7 +1,7 @@
 <template>
   <main>
     <n-h2 prefix="bar" align-text>Version 1 UUID</n-h2>
-    <UUIDV1Generator />
+    <UUIDV1Generator :config="config" />
     <n-h2 prefix="bar" align-text>Config</n-h2>
     <UUIDV1Config v-model:config="config" />
     <n-h2 prefix="bar" align-text>What is a version 1 UUID?</n-h2>
@@ -15,8 +15,9 @@ import { NH2 } from "naive-ui";
 import UUIDV1Description from "@/components/uuid/description/UUIDV1Description.vue";
 import UUIDV1Generator from "@/components/uuid/generator/UUIDV1Generator.vue";
 import UUIDV1Config from "@/components/uuid/config/UUIDV1Config.vue";
+import { generateMACAddress } from "@/utils/mac";
 
 const config = ref({
-  macAddress: "00-B0-D0-63-C2-26",
+  macAddress: generateMACAddress(),
 });
 </script>
