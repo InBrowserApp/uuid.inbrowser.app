@@ -9,13 +9,14 @@
         {{ uuid }}
       </n-text>
     </template>
-    Copy to Clipboard
+    <n-icon :component="Clipboard16Regular" /> Copy to Clipboard
   </n-tooltip>
 </template>
 
 <script setup lang="ts">
-import { NText, NTooltip } from "naive-ui";
+import { NText, NTooltip, NIcon } from "naive-ui";
 import { useMessage } from "naive-ui";
+import Clipboard16Regular from "@vicons/fluent/Clipboard16Regular";
 
 const message = useMessage();
 
