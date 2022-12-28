@@ -1,16 +1,23 @@
 <template>
   <n-config-provider :theme="theme">
     <n-global-style />
-    <div class="app">
-      <TheHeader />
-
-      <RouterView />
-    </div>
+    <n-message-provider>
+      <div class="app">
+        <TheHeader />
+        <RouterView />
+      </div>
+    </n-message-provider>
   </n-config-provider>
 </template>
 
 <script lang="ts" setup>
-import { useOsTheme, darkTheme, NConfigProvider, NGlobalStyle } from "naive-ui";
+import {
+  useOsTheme,
+  darkTheme,
+  NConfigProvider,
+  NGlobalStyle,
+  NMessageProvider,
+} from "naive-ui";
 import { RouterView } from "vue-router";
 import { computed } from "vue";
 import TheHeader from "@/components/header/TheHeader.vue";
