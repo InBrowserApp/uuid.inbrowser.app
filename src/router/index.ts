@@ -5,6 +5,7 @@ import UUIDV3View from "../views/UUIDV3View.vue";
 import UUIDV4View from "../views/UUIDV4View.vue";
 import UUIDV5View from "../views/UUIDV5View.vue";
 import NilUUIDView from "../views/NilUUIDView.vue";
+import UUIDDecodeView from "../views/UUIDDecodeView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,6 +14,11 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+    },
+    {
+      path: "/decode",
+      name: "decode",
+      component: UUIDDecodeView,
     },
     {
       path: "/v1",
