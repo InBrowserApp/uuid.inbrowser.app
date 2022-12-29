@@ -19,6 +19,10 @@
     <router-link to="/v5" #="{ navigate, href }" custom>
       <n-a :href="href" @click="navigate">Version 5</n-a>
     </router-link>
+    <n-divider vertical />
+    <router-link to="/nil" #="{ navigate, href }" custom>
+      <n-a :href="href" @click="navigate">Nil UUID</n-a>
+    </router-link>
     <br />
     Bulk UUID Generator:
     <router-link to="/bulk/v1" #="{ navigate, href }" custom>
