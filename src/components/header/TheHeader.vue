@@ -1,11 +1,15 @@
 <template>
   <header>
-    <HeaderText />
+    <div class="wrapper">
+      <HeaderText />
+      <HeaderNav class="nav" />
+    </div>
   </header>
 </template>
 
 <script lang="ts" setup>
 import HeaderText from "./HeaderText.vue";
+import HeaderNav from "./nav/HeaderNav.vue";
 </script>
 
 <style scoped>
