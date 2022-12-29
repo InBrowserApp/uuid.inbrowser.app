@@ -2,7 +2,7 @@
   <main>
     <n-h2 prefix="bar" align-text>Get a Random UUID</n-h2>
     <UUIDV4Generator />
-    <n-h2 prefix="bar" align-text>Other Tools</n-h2>
+    <n-h2 prefix="bar" align-text>Tools List</n-h2>
     UUID Generator:
     <router-link to="/v1" #="{ navigate, href }" custom>
       <n-a :href="href" @click="navigate">Version 1</n-a>
