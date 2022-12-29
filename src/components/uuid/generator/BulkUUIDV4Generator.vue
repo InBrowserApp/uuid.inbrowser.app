@@ -21,7 +21,6 @@ import CopyToClipboardButton from "@/components/controls/CopyToClipboardButton.v
 import UUIDsDownloadButton from "@/components/controls/UUIDsDownloadButton.vue";
 import { useCopyToClipboard } from "@/composables/useCopyToClipboard";
 
-
 const props = defineProps<{
   size: number;
 }>();
@@ -34,7 +33,7 @@ const refresh = () => {
   uuids.value = generateUUIDs();
 };
 
-watch(() => props.size, refresh)
+watch(() => props.size, refresh);
 
 const { copy } = useCopyToClipboard(uuids.value.join("\n"));
 </script>

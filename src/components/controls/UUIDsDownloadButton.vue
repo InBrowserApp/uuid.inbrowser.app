@@ -58,7 +58,9 @@ function downloadTxt() {
 }
 
 function downloadCsv() {
-  const blob = new Blob(["uuid,\n" + props.uuids.join(",\n")], { type: "text/csv" });
+  const blob = new Blob(["uuid,\n" + props.uuids.join(",\n")], {
+    type: "text/csv",
+  });
   downloadFile(blob, "uuids.csv");
 }
 
