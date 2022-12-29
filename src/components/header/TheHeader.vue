@@ -1,8 +1,12 @@
 <template>
   <header>
-    <div>Header</div>
+    <HeaderText />
   </header>
 </template>
+
+<script lang="ts" setup>
+import HeaderText from "./HeaderText.vue";
+</script>
 
 <style scoped>
 header {
