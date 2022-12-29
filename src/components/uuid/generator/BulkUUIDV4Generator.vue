@@ -6,6 +6,7 @@
     <n-space>
       <RegenerateButton @click="refresh" />
       <CopyToClipboardButton @click="copy" />
+      <UUIDsDownloadButton :uuids="uuids" />
     </n-space>
   </div>
 </template>
@@ -17,7 +18,9 @@ import UUIDsDisplay from "@/components/uuid/UUIDsDisplay.vue";
 import { NSpace } from "naive-ui";
 import RegenerateButton from "@/components/controls/RegenerateButton.vue";
 import CopyToClipboardButton from "@/components/controls/CopyToClipboardButton.vue";
+import UUIDsDownloadButton from "@/components/controls/UUIDsDownloadButton.vue";
 import { useCopyToClipboard } from "@/composables/useCopyToClipboard";
+
 
 const props = defineProps<{
   size: number;
