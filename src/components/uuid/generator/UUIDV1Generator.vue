@@ -18,7 +18,7 @@ import { NSpace } from "naive-ui";
 import RegenerateButton from "@/components/controls/RegenerateButton.vue";
 import CopyToClipboardButton from "@/components/controls/CopyToClipboardButton.vue";
 import { useCopyToClipboard } from "@/composables/useCopyToClipboard";
-import type { UUIDV1Config } from "../config/UUIDV1Config";
+import type { UUIDV1Config } from "@/utils/uuid/config/UUIDV1Config";
 import { parseMACAddress } from "@/utils/mac";
 
 const props = defineProps<{

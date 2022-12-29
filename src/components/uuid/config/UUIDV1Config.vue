@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import MACAddressInput from "@/components/misc/MACAddressInput.vue";
-import type { UUIDV1Config } from "./UUIDV1Config";
+import type { UUIDV1Config } from "@/utils/uuid/config/UUIDV1Config";
 import { NFormItem } from "naive-ui";
 
 const props = defineProps<{
