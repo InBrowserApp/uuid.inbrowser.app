@@ -6,6 +6,7 @@ import UUIDV4View from "../views/UUIDV4View.vue";
 import UUIDV5View from "../views/UUIDV5View.vue";
 import NilUUIDView from "../views/NilUUIDView.vue";
 import UUIDDecodeView from "../views/UUIDDecodeView.vue";
+import BulkUUIDV1View from "../views/BulkUUIDV1View.vue";
 import BulkUUIDV4View from "../views/BulkUUIDV4View.vue";
 
 const router = createRouter({
@@ -45,6 +46,11 @@ const router = createRouter({
       path: "/nil",
       name: "nil-uuid",
       component: NilUUIDView,
+    },
+    {
+      path: "/bulk/v1",
+      name: "bulk-v1",
+      component: BulkUUIDV1View,
     },
     {
       path: "/bulk/v4",

@@ -1,5 +1,5 @@
 <template>
-  <n-form-item label="Size" :show-feedback="false">
+  <n-form-item label="Size">
     <n-input-number v-model:value="size" />
   </n-form-item>
 </template>
