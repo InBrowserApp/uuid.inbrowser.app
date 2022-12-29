@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import UUIDV1View from "../views/UUIDV1View.vue";
 import UUIDV3View from "../views/UUIDV3View.vue";
 import UUIDV4View from "../views/UUIDV4View.vue";
+import UUIDV5View from "../views/UUIDV5View.vue";
 import NilUUIDView from "../views/NilUUIDView.vue";
 
 const router = createRouter({
@@ -27,6 +28,11 @@ const router = createRouter({
       path: "/v4",
       name: "uuidv4",
       component: UUIDV4View,
+    },
+    {
+      path: "/v5",
+      name: "uuidv5",
+      component: UUIDV5View,
     },
     {
       path: "/nil",
