@@ -21,6 +21,6 @@ import DecodeV5 from "./DecodeV5.vue";
 import DecodeError from "./DecodeError.vue";
 
 defineProps<{
-  uuid: string | undefined;
+  uuid?: string;
 }>();
 </script>

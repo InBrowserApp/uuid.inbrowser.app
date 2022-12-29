@@ -23,11 +23,11 @@ import { v4 as uuidv4, validate } from "uuid";
 const placeholder = uuidv4();
 
 const props = defineProps<{
-  uuid: string | undefined;
+  uuid?: string;
 }>();
 
 const emit = defineEmits<{
-  (event: "update:uuid", uuid: string | undefined): void;
+  (event: "update:uuid", uuid?: string): void;
 }>();
 
 const uuidRef = ref(props.uuid);
@@ -38,7 +38,7 @@ const validated = computed(() => {
 
 watch(
   () => uuidRef.value,
-  (uuid: string | undefined) => {
+  (uuid?: string) => {
     if (uuid && validate(uuid)) {
       emit("update:uuid", uuid);
     } else {
