@@ -14,6 +14,7 @@
     <n-descriptions-item label="Variant">
       <VariantDisplay :variant="decodeResult.variant" />
     </n-descriptions-item>
+    <n-descriptions-item label="Algorithm">SHA1</n-descriptions-item>
   </n-descriptions>
 </template>
 
