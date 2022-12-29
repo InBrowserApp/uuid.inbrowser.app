@@ -28,3 +28,19 @@ export function decode(uuid: string): DecodeResult {
     variant,
   };
 }
+
+export function decodeV1(uuid: string) {
+  const mac = uuid
+    .split("-")[4]
+    .toUpperCase()
+    .match(/.{1,2}/g)
+    ?.join(":");
+
+  if (!mac) {
+    throw new Error("Invalid UUID");
+  }
+
+  return {
+    mac,
+  };
+}
