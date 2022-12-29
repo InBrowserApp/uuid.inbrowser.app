@@ -1,5 +1,6 @@
 <template>
   <main>
+    <BackToHome />
     <n-h2 prefix="bar" align-text>Version 5 UUID</n-h2>
     <UUIDV5Generator :config="config" />
     <n-h2 prefix="bar" align-text>Config</n-h2>
@@ -17,6 +18,7 @@ import UUIDV5Description from "@/components/uuid/description/UUIDV5Description.v
 import UUIDV5Generator from "@/components/uuid/generator/UUIDV5Generator.vue";
 import UUIDV35Config from "@/components/uuid/config/UUIDV35Config.vue";
 import { v4 as uuidv4 } from "uuid";
+import BackToHome from "@/components/misc/BackToHome.vue";
 
 const config = ref<UUIDV35ConfigType>({
   namespace: uuidv4(),

@@ -1,5 +1,6 @@
 <template>
   <main>
+    <BackToHome />
     <n-h2 prefix="bar" align-text>Version 1 UUID</n-h2>
     <UUIDV1Generator :config="config" />
     <n-h2 prefix="bar" align-text>Config</n-h2>
@@ -16,6 +17,7 @@ import UUIDV1Description from "@/components/uuid/description/UUIDV1Description.v
 import UUIDV1Generator from "@/components/uuid/generator/UUIDV1Generator.vue";
 import UUIDV1Config from "@/components/uuid/config/UUIDV1Config.vue";
 import { generateMACAddress } from "@/utils/mac";
+import BackToHome from "@/components/misc/BackToHome.vue";
 
 const config = ref({
   macAddress: generateMACAddress(),

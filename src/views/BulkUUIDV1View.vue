@@ -1,5 +1,6 @@
 <template>
   <main>
+    <BackToHome />
     <n-h2 prefix="bar" align-text>Bulk Version 1 UUID</n-h2>
     <BulkUUIDV1Generator :size="size" :config="config" />
     <n-h2 prefix="bar" align-text>Config</n-h2>
@@ -18,6 +19,7 @@ import BulkUUIDV1Generator from "@/components/uuid/generator/BulkUUIDV1Generator
 import BulkSizeInput from "@/components/uuid/config/BulkSizeInput.vue";
 import { generateMACAddress } from "@/utils/mac";
 import UUIDV1Config from "@/components/uuid/config/UUIDV1Config.vue";
+import BackToHome from "@/components/misc/BackToHome.vue";
 
 const size = ref(10);
 const config = ref({
