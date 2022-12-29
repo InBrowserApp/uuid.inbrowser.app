@@ -1,7 +1,5 @@
 <template>
-  <n-form-item label="Namespace">
-    <n-input v-model:value="config.namespace" type="text" />
-  </n-form-item>
+  <NamespaceInput v-model:namespace="config.namespace" />
   <n-form-item label="Name" :show-feedback="false">
     <n-input v-model:value="config.name" type="text" />
   </n-form-item>
@@ -12,6 +10,7 @@ import type { UUIDV35Config } from "@/utils/uuid/config/UUIDV35Config";
 
 import { computed } from "vue";
 import { NFormItem, NInput } from "naive-ui";
+import NamespaceInput from "@/components/misc/NamespaceInput.vue";
 
 const props = defineProps<{
   config: UUIDV35Config;
