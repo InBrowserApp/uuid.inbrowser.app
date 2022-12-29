@@ -42,6 +42,7 @@ const refresh = () => {
 };
 
 watch(() => props.size, refresh);
+watch(() => props.config.macAddress, refresh);
 
 const { copy } = useCopyToClipboard(uuids.value.join("\n"));
 </script>
