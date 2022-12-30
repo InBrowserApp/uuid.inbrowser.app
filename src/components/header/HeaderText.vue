@@ -10,7 +10,7 @@
       </router-link>
     </n-h1>
     <n-h2 class="h2">
-      InBrowser.App UUID is a tool to generate and decode UUIDs. Fully runs in
+      UUID InBrowser.App is a tool to generate and decode UUIDs. Fully runs in
       your browser, no data is sent to the server. Fast, secure, and offline
       capable.
     </n-h2>
