@@ -43,4 +43,22 @@
 <script setup lang="ts">
 import { NH2, NDivider, NA } from "naive-ui";
 import UUIDV4Generator from "@/components/uuid/generator/UUIDV4Generator.vue";
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "UUID InBrowser.App",
+  meta: [
+    {
+      name: "description",
+      content:
+        "UUID InBrowser.App is a tool to generate and decode UUIDs. Fully runs in your browser, no data is sent to the server. Fast, secure, and offline capable.",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://uuid.inbrowser.app/",
+    },
+  ],
+});
 </script>

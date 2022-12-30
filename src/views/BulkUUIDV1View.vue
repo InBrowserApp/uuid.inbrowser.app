@@ -20,6 +20,24 @@ import BulkSizeInput from "@/components/uuid/config/BulkSizeInput.vue";
 import { generateMACAddress } from "@/utils/mac";
 import UUIDV1Config from "@/components/uuid/config/UUIDV1Config.vue";
 import BackToHome from "@/components/misc/BackToHome.vue";
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Bulk Version 1 UUID Generator | UUID InBrowser.App",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Generate bulk version 1 UUIDs. Fully runs in your browser, no data is sent to the server. Fast, secure, and offline capable.",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://uuid.inbrowser.app/bulk/v1",
+    },
+  ],
+});
 
 const size = ref(10);
 const config = ref({

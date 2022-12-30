@@ -17,6 +17,24 @@ import UUIDV4Description from "@/components/uuid/description/UUIDV4Description.v
 import BulkUUIDV4Generator from "@/components/uuid/generator/BulkUUIDV4Generator.vue";
 import BulkSizeInput from "@/components/uuid/config/BulkSizeInput.vue";
 import BackToHome from "@/components/misc/BackToHome.vue";
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Bulk Version 4 UUID Generator | UUID InBrowser.App",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Generate bulk version 4 UUIDs. Fully runs in your browser, no data is sent to the server. Fast, secure, and offline capable.",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://uuid.inbrowser.app/bulk/v4",
+    },
+  ],
+});
 
 const size = ref(10);
 </script>
