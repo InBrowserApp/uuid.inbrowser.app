@@ -1,4 +1,4 @@
-# [📦 UUID InBrowser.App](https://uuid.inbrowser.app)
+# 📦 UUID InBrowser.App
 
 https://uuid.inbrowser.app
 
@@ -13,6 +13,7 @@ UUID InBrowser.App is a tool to generate and decode UUIDs. Fully runs in your br
 * Generate UUIDs in different formats.
 
 ## 🧑‍💻 Develop
+
 
 ```sh
 $ npm run dev # Run Dev Server
