@@ -1,4 +1,4 @@
-# 📦 UUID InBrowser.App
+# 🆔 UUID InBrowser.App
 
 https://uuid.inbrowser.app
 
